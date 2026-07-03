@@ -7,6 +7,7 @@ Leverage expressive mouse movements to enable position and orientation control w
 ![demo of mouse teleop](images/mouse_teleop_full.gif)
 
 This project provides a MuJoCo simulation to test-drive mouse-based teleoperation on the SO-101 ARM.
+
 **Note:** This project is *not* polished or reliable, this is very much a proof of concept/work in progress. Inverse Kinematics is a tricky game, and you should make sure you understand the risks (and you take full responsibility) before even considering running any code on physical hardware.
 
 ## Dependencies
@@ -26,6 +27,10 @@ uv sync
 ```bash
 uv run python sim_mouse_teleop.py
 ```
+
+This should open a MuJoCo simulation window and a tkinter GUI window with a gray background.
+
+### Arguments
 
 | Argument | Default | Description |
 |---|---|---|
