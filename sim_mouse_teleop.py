@@ -33,7 +33,7 @@ import mujoco.viewer
 import numpy as np
 import placo
 
-# ── Inlined utilities ─────────────────────────────────────────────────────────
+# ── Inlined utilities (from lerobot) ──────────────────────────────────────────
 
 def precise_sleep(seconds: float, spin_threshold: float = 0.010, sleep_margin: float = 0.005) -> None:
     if seconds <= 0:
@@ -164,7 +164,8 @@ class MouseState:
     state:    AppState       = field(default=AppState.WAITING)
     pos:      tuple | None   = None
     last_pos: tuple | None   = None
-    # scroll / Z
+    # scroll accumulates raw ticks; z_target is the desired height after converting
+    # ticks to meters; z_offset is the smoothly interpolated current value.
     scroll:   int   = 0
     z_target: float = 0.0
     z_offset: float = 0.0
@@ -182,6 +183,9 @@ class MouseState:
 
 
 @dataclass
+# Grasping is faked (no contact forces involved); when the gripper closes on the cube,
+# we lock in the cube's pose relative to the gripper and constantly teleport the cube
+# to maintain that relative pose. This is a quick and dirty hack, and I'm not proud.
 class GraspState:
     active: bool             = False
     offset: np.ndarray | None = None   # cube origin in gripper body frame
@@ -550,6 +554,10 @@ def run_loop(
                         -dx_px * MOUSE_SENSITIVITY,
                         z_delta,
                     ])
+                    # Two separate rate limits:
+                    # 1. Cap the EE step size so large mouse jumps don't teleport the target.
+                    # 2. Clamp joint angle changes to max_joint_delta so the arm moves at a
+                    #    controlled speed regardless of what IK returns.
                     step = np.linalg.norm(ee_delta[:2])
                     if step > MAX_EE_STEP:
                         ee_delta[:2] *= MAX_EE_STEP / step
