@@ -51,9 +51,9 @@ uv run python sim_mouse_teleop.py
 
 | File | Purpose |
 |---|---|
-| `so101_new_calib.urdf` | used by the placo kinematics solver for FK/IK |
-| `so101_new_calib.xml` | MuJoCo MJCF robot definition, including joints, actuators, and meshes |
-| `scene.xml` | MuJoCo scene file; includes the robot, ground plane, cube, and tray |
+| `model/so101_new_calib.urdf` | used by the placo kinematics solver for FK/IK |
+| `model/so101_new_calib.xml` | MuJoCo MJCF robot definition, including joints, actuators, and meshes |
+| `model/scene.xml` | MuJoCo scene file; includes the robot, ground plane, cube, and tray |
 | `assets/` | STL mesh files for the SO-101 arm links |
 
 *A "mesh" is basically a collection of geometries (triangles) that determines how an object looks in the simulation*

@@ -90,8 +90,8 @@ class RobotKinematics:
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
 _HERE        = Path(__file__).parent
-MJCF_PATH    = str(_HERE / "scene.xml")
-URDF_PATH    = str(_HERE / "so101_new_calib.urdf")
+MJCF_PATH    = str(_HERE / "model" / "scene.xml")
+URDF_PATH    = str(_HERE / "model" / "so101_new_calib.urdf")
 TARGET_FRAME = "gripper_frame_link"
 
 # ── Configuration ─────────────────────────────────────────────────────────────

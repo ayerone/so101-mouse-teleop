@@ -445,23 +445,6 @@ wheels = [
 ]
 
 [[package]]
-name = "lerobot-mouse-teleop"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "mujoco" },
-    { name = "numpy" },
-    { name = "placo" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "mujoco" },
-    { name = "numpy" },
-    { name = "placo", specifier = "==0.9.15" },
-]
-
-[[package]]
 name = "matplotlib-inline"
 version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
@@ -933,6 +916,23 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/82/d1/e68942c2136ba7f16150d7174376df83f7b5034391605839a280c94b6b93/rhoban_cmeel_jsoncpp-1.9.4.9-0-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:d2d289decd44461a22561353d26a4ebd94a35d7967de43a094cdf1d68afd47ce", size = 338462, upload-time = "2025-06-24T18:53:45.242Z" },
     { url = "https://files.pythonhosted.org/packages/ba/5b/97acff8d776ef2fca5d4e21893624dbb424095f1a4b66c3c0d1375854341/rhoban_cmeel_jsoncpp-1.9.4.9-0-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:fe1165ea4390a4cfce698f1018b3305e27abf4f9db7f464116f7252ae27d16ae", size = 397779, upload-time = "2025-06-24T18:53:46.76Z" },
     { url = "https://files.pythonhosted.org/packages/11/7c/4f2cd6df47c6b83652e8f9ffafb25f056a1b01fa0050df4b4abf5f41dc12/rhoban_cmeel_jsoncpp-1.9.4.9-0-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:f49041be98e0104856f8a0874936f50be435c514a8cd20ed5291b82d81912099", size = 363908, upload-time = "2025-06-24T18:53:48.05Z" },
+]
+
+[[package]]
+name = "so101-mouse-teleop"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "mujoco" },
+    { name = "numpy" },
+    { name = "placo" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "mujoco" },
+    { name = "numpy" },
+    { name = "placo", specifier = "==0.9.15" },
 ]
 
 [[package]]
