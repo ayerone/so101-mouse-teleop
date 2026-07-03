@@ -2,7 +2,7 @@
 
 [What is LeRobot?](https://github.com/ayerone/lerobot-intro)
 
-Leverage expressive mouse movements to enable position and orientation control while teleoperating the Huggingface Lerobot SO-101.
+Mouse Teleop: leverage expressive mouse movements to enable position and orientation control while teleoperating the Huggingface Lerobot SO-101.
 
 ![demo of mouse teleop](images/mouse_teleop_full.gif)
 
