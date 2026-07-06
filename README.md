@@ -3,7 +3,7 @@
 [What is LeRobot?](https://github.com/ayerone/lerobot-intro)
 
 ## This Project
-Using the mouse for teleoperation enables increased maneuverability (versus keyboard teleop). Moving the mouse translates the end-effector in X and Y (just like arrow keys would), and the scroll wheel adjusts the Z. Then, holding 'r' switches to rotation mode, where the gripper can be moved in "hunch" versus "lift" (forward/back on the mouse) and wrist roll (mouse left/right).
+Using the mouse for teleoperation enables increased maneuverability (versus keyboard teleop). Moving the mouse translates the end-effector in X and Y (just like arrow keys would), and the scroll wheel adjusts the Z. Then, holding 'r' switches to rotation mode, where the gripper can be moved in "hunch"/"lift" (forward/back on the mouse) and wrist roll (mouse left/right). This let me perform tasks like pick and place without a leader arm.
 
 *Full controls described below*
 
