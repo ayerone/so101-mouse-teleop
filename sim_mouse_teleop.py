@@ -511,9 +511,10 @@ def run_loop(
                     dy_px = mouse.pos[1] - mouse.orient_origin[1]
 
                     # theta: tilt (rotate around axis_1 — horizontal, ⊥ to approach direction)
-                    # phi:   azimuth (rotate around world Z — vertical)
+                    # phi:   roll (rotate around axis_2 — the gripper's own current pointing
+                    #        axis, captured at the moment `r` was pressed; not world Z)
                     dtheta = -dy_px * ORIENT_SENSITIVITY  # mouse up → tilt gripper up
-                    dphi   =  dx_px * ORIENT_SENSITIVITY  # mouse right → swing gripper right
+                    dphi   =  dx_px * ORIENT_SENSITIVITY  # mouse right → roll gripper
 
                     z_delta = apply_scroll_z(mouse)
                     mouse.T_at_r_press[2, 3] = np.clip(
