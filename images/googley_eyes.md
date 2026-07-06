@@ -2,7 +2,7 @@
 
 Each eye is two parts: a white sclera sphere fixed to the body, and a dark pupil sphere on a ball joint with near-zero stiffness. Gravity makes the pupil droop and swing as the robot moves.
 
-Add this inside whatever body you want the eyes attached to (in this repo, the gripper jaw):
+I added this inside the gripper jaw section of the MuJoCo robot robot definition:
 
 ```xml
 <!-- right eye -->
