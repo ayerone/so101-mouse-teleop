@@ -11,7 +11,7 @@ Using the mouse for teleoperation enables increased maneuverability (versus keyb
 
 I provide a MuJoCo simulation to test-drive mouse-based teleoperation on the SO-101 robot.
 
-**Note:** This project is *not* polished or dependable, this is very much a proof of concept/work in progress. Inverse Kinematics is a tricky game, and you should make sure you understand the risks (and you take full responsibility) before even considering running any code on physical hardware.
+**Note:** This project is very much a proof of concept/work in progress. The code presented here is *not* polished, reliable, or dependable. Inverse Kinematics is a tricky game, and you should make sure you understand the risks (and you take full responsibility) before even considering running *any* code on physical hardware.
 
 ## Dependencies
 
